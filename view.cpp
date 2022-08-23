@@ -4,9 +4,6 @@
 int main(int argc, char* argv[])
 {
     
-    HANDLE dllHandle = NULL;
-    DWORD dllSize = NULL;
-
     HANDLE hFile = CreateFileA(argv[1], GENERIC_READ, FILE_SHARE_READ, NULL, OPEN_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
     HANDLE filemap = NULL;
     filemap = CreateFileMapping(hFile, NULL, PAGE_READONLY | SEC_IMAGE, 0, 0, NULL);
